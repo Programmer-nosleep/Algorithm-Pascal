@@ -1,5 +1,7 @@
-out
-build
+.DS_Store
+
+out/*
+build/*
 
 main.o
 main
