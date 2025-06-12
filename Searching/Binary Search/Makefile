@@ -1,10 +1,10 @@
 FPC := fpc
 
 SRC := src/main.pas
-OBJ := src/main.obj
-OUTDIR := out
+OBJ := main.o
 
-TARGET := $(OUTDIR)/main
+TARGET := main
+OUTDIR := out
 
 LDFLAGS := ld -arch x86_64 -macos_version_min 11.0
 FLAGS := -FE$(OUTDIR) -FU$(OUTDIR) -XR/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Fl/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
