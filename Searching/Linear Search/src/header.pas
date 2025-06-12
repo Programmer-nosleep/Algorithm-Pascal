@@ -1,6 +1,5 @@
 unit Header;
 
-
 interface
 procedure MyProcedure();
 implementation
