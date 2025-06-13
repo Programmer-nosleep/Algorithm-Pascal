@@ -1,13 +1,16 @@
 FPC := fpc
 
-SRC := src/main.pas
-OBJ := main.o
+SRC_PATH := src
+INC_PATH := include
+
+SRC := $(wildcard $(SRC_PATH)/*.pas)
 
 TARGET := main
 OUTDIR := out
+OBJ := $(OUTDIR)/main.o
 
-LDFLAGS := ld -arch x86_64 -macos_version_min 11.0
-FLAGS := -FE$(OUTDIR) -FU$(OUTDIR) -XR/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Fl/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+LDFLAGS := ld -arch x86_64 -macos_version_min 11.0 -Iinclude
+FLAGS := -FE. -FU$(OUTDIR) -I$(INC_PATH) -XR/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Fl/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
 
 all: $(TARGET)
 
