@@ -29,7 +29,7 @@ begin
       binary_search(a, mid + 1, high, key);
   end
   else if (low > high) then
-    writeln('Unsuccessful Search');
+    writeln('Element array tidak di temukan');
 end;
 
 end.
