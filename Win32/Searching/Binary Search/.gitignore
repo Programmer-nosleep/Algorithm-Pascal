@@ -1,7 +1,9 @@
 .DS_Store
+desktop.ini
 
 out/*
 build/*
 
 main.o
 main
+main.exe

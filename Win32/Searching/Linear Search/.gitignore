@@ -1,4 +1,8 @@
+.DS_Store
+desktop.ini
+
 out
 build
 
 main
+main.exe
